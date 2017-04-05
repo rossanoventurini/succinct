@@ -169,7 +169,7 @@ namespace succinct { namespace broadword {
         if (!x) {
             return false;
         }
-        ret = bit_position(x & -int64_t(x));
+        ret = bit_position(x & static_cast<uint64_t>(-int64_t(x)));
         return true;
 #endif
     }
